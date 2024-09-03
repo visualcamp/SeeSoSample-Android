@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    buildToolsVersion rootProject.buildToolsVersion
-    compileSdkVersion rootProject.compileSdkVersion
+    compileSdk 34
 
     defaultConfig {
         applicationId "camp.visual.android.sample.seesosample"
@@ -20,6 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'visual.camp.sample.app'
 
 }
 
@@ -32,7 +32,11 @@ dependencies {
     implementation project(":libgaze-release")
     implementation project(':gazetracker-release')
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.22"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
 }

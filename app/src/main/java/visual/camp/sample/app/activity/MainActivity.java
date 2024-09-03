@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
     };
     private static final int REQ_PERMISSION = 1000;
     private GazeTrackerManager gazeTrackerManager;
-    private ViewLayoutChecker viewLayoutChecker = new ViewLayoutChecker();
-    private HandlerThread backgroundThread = new HandlerThread("background");
+    private final ViewLayoutChecker viewLayoutChecker = new ViewLayoutChecker();
+    private final HandlerThread backgroundThread = new HandlerThread("background");
     private Handler backgroundHandler;
 
     @Override
